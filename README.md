@@ -145,24 +145,39 @@ This indicated mild inflation of the association statistics and highlighted the 
 
 ## Repository Structure
 
-```text
-code/
-├── 01_data_inspection.R
-├── 02_genotype_qc.sh
-├── 03_phenotype_analysis.R
-├── 04_prepare_plink_files.R
-├── 05_association_analysis.sh
-├── 06_regional_analysis.sh
-└── 07_gwas_visualization.R
+## Repository Structure
 
-figures/
-├── triglyceride_distribution.png
-├── bmi_distribution.png
-├── log_triglyceride_distribution.png
-├── log_bmi_distribution.png
-├── manhattan_plot.png
-├── qq_plot.png
-└── regional_association_plot.png
+```text
+triglyceride-gwas-analysis/
+│
+├── data/                
+│   ├── geno_final.ped
+│   ├── geno_final.map
+│   └── pheno_final.csv
+│
+├── code/
+│   ├── 01_data_inspection.R
+│   ├── 02_genotype_qc.sh
+│   ├── 03_phenotype_analysis.R
+│   ├── 04_prepare_plink_files.R
+│   ├── 05_association_analysis.sh
+│   ├── 06_regional_analysis.sh
+│   └── 07_gwas_visualization.R
+│
+├── figures/
+│   ├── triglyceride_distribution.png
+│   ├── bmi_distribution.png
+│   ├── log_triglyceride_distribution.png
+│   ├── log_bmi_distribution.png
+│   ├── manhattan_plot.png
+│   ├── qq_plot.png
+│   └── regional_association_plot.png
+│
+├── results/
+│   └── selected analysis outputs
+│
+├── .gitignore
+└── README.md
 ```
 
 ---
