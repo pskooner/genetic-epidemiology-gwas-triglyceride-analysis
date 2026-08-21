@@ -150,7 +150,7 @@ This indicated mild inflation of the association statistics and highlighted the 
 ```text
 triglyceride-gwas-analysis/
 │
-├── data/                
+├── data/                              # Local only; not distributed
 │   ├── geno_final.ped
 │   ├── geno_final.map
 │   └── pheno_final.csv
@@ -161,7 +161,7 @@ triglyceride-gwas-analysis/
 │   ├── 03_phenotype_analysis.R
 │   ├── 04_prepare_plink_files.R
 │   ├── 05_association_analysis.sh
-│   ├── 06_regional_analysis.sh
+│   ├── 06_regional_analysis.R
 │   └── 07_gwas_visualization.R
 │
 ├── figures/
@@ -174,7 +174,10 @@ triglyceride-gwas-analysis/
 │   └── regional_association_plot.png
 │
 ├── results/
-│   └── selected analysis outputs
+│   ├── phenotype_summary_statistics.csv
+│   ├── tg_gwas_additive_sorted.txt
+│   ├── tg_region_100kb.txt
+│   └── genomic_inflation_factor.txt
 │
 ├── .gitignore
 └── README.md
