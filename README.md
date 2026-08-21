@@ -150,7 +150,7 @@ This indicated mild inflation of the association statistics and highlighted the 
 ```text
 triglyceride-gwas-analysis/
 │
-├── data/                              # Local only; not distributed
+├── data/                              # Local
 │   ├── geno_final.ped
 │   ├── geno_final.map
 │   └── pheno_final.csv
