@@ -1,55 +1,60 @@
-# ============================================================
 # Genome-Wide Association Analysis of Triglyceride Levels
 # Script 01: Data Inspection
 # Author: Parminder Kooner
-# ============================================================
 
-# ------------------------------------------------------------
-# Project directory
-# ------------------------------------------------------------
+# Input files
+map_file <- "data/geno_final.map"
+ped_file <- "data/geno_final.ped"
+pheno_file <- "data/pheno_final.csv"
 
-project_dir <- "C:/Users/HP/OneDrive/Documents/UT Health Houston - MS Biostatistics/Summer 2026/PH 2780 - Genetic Epidemiology/Final Project"
-
-# Set working directory
-setwd(project_dir)
-
-# ------------------------------------------------------------
 # Read genotype data
-# ------------------------------------------------------------
 
 map <- read.table(
-  "data/geno_final.map",
-  header = FALSE
+  map_file,
+  header = FALSE,
+  stringsAsFactors = FALSE
 )
 
 ped <- read.table(
-  "data/geno_final.ped",
-  header = FALSE
+  ped_file,
+  header = FALSE,
+  stringsAsFactors = FALSE
 )
 
-# Examine dimensions
-dim(map)
-dim(ped)
+# Inspect genotype data
 
-# Preview data
-head(map)
-head(ped)
+cat("\nMAP file dimensions:\n")
+print(dim(map))
 
-# Number of SNPs
-nrow(map)
+cat("\nPED file dimensions:\n")
+print(dim(ped))
 
-# Distribution of SNPs by chromosome
-table(map$V1)
+cat("\nFirst six rows of MAP file:\n")
+print(head(map))
 
-# ------------------------------------------------------------
+cat("\nFirst six rows of PED file:\n")
+print(head(ped))
+
+cat("\nNumber of SNPs:\n")
+print(nrow(map))
+
+cat("\nSNPs by chromosome:\n")
+print(table(map$V1))
+
 # Read phenotype data
-# ------------------------------------------------------------
 
 pheno <- read.csv(
-  "data/pheno_final.csv"
+  pheno_file,
+  stringsAsFactors = FALSE
 )
 
-# Inspect phenotype dataset
-head(pheno)
+# Inspect phenotype data
+
+cat("\nPhenotype file dimensions:\n")
+print(dim(pheno))
+
+cat("\nPhenotype structure:\n")
 str(pheno)
-summary(pheno)
+
+cat("\nPhenotype summary:\n")
+print(summary(pheno))
