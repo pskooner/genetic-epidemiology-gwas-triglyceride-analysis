@@ -1,19 +1,18 @@
-# R files
+# Local data
+data/
+*.ped
+*.map
+
+# R
 .Rhistory
 .RData
 .Ruserdata
-
-# RStudio
 .Rproj.user/
+
+# PLINK temporary files
+*.log
+*.nosex
 
 # Operating system files
 .DS_Store
 Thumbs.db
-
-# Original/restricted course data
-*.ped
-*.map
-
-# PLINK temporary/output files
-*.log
-*.nosex
