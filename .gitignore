@@ -1,5 +1,7 @@
-# Local data
+# Original course data
 data/
+
+# Genotype data
 *.ped
 *.map
 
