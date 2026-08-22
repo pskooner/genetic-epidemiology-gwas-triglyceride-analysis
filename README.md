@@ -145,8 +145,6 @@ This indicated mild inflation of the association statistics and highlighted the 
 
 ## Repository Structure
 
-## Repository Structure
-
 ```text
 triglyceride-gwas-analysis/
 │
