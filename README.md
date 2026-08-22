@@ -234,9 +234,9 @@ This project demonstrates experience with:
 
 ## Author
 
-**Parminder Kooner**
-M.S. Biostatistics and Data Science
-Graduate Certificate in Genomics and Bioinformatics
+**Parminder Kooner**  
+M.S. Biostatistics and Data Science  
+Graduate Certificate in Genomics and Bioinformatics  
 UTHealth Houston School of Public Health
 
 [LinkedIn](https://www.linkedin.com/in/parmkooner) | [GitHub](https://github.com/pskooner)
