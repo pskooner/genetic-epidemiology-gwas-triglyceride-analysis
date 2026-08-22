@@ -44,6 +44,7 @@ The original genotype and phenotype datasets were provided for graduate coursewo
 ---
 
 ## Analysis Workflow
+The complete analysis code is available in the [code directory](code/).
 
 ### 1. Data Inspection
 
