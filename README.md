@@ -46,11 +46,11 @@ The original genotype and phenotype datasets were provided for graduate coursewo
 ## Analysis Workflow
 The complete analysis code is available in the [code directory](code/).
 
-### 1. Data Inspection
+### 1. [Data Inspection](code/01_data_inspection.R)
 
 Genotype, marker, and phenotype files were inspected using R and Unix/Linux to verify dataset structure, participant counts, SNP counts, and variable coding.
 
-### 2. Genotype Quality Control
+### 2. [Genotype Quality Control](code/02_genotype_qc.sh)
 
 Genotype quality control was performed using **PLINK** and included assessment of:
 
@@ -61,7 +61,7 @@ Genotype quality control was performed using **PLINK** and included assessment o
 
 The dataset contained 830 SNPs on chromosome 19. Six SNPs had genotype missingness greater than 10%, while one SNP failed the predefined Hardy-Weinberg equilibrium threshold of *P* ≤ 0.001.
 
-### 3. Phenotype Assessment
+### 3. [Phenotype Assessment](code/03_phenotype_analysis.R)
 
 The distributions of triglyceride levels and BMI were evaluated using:
 
@@ -75,7 +75,7 @@ Triglyceride levels exhibited substantial positive skew, while BMI showed a mild
 
 Natural logarithm transformations were therefore applied to both variables prior to downstream association analysis.
 
-### 4. Association Analysis
+### 4. [Phenotype Transformation and PLINK File Preparation](code/04_prepare_plink_files.R)
 
 The primary association analysis used:
 
@@ -90,8 +90,9 @@ The primary association analysis used:
 
 SNP-level linear regression was performed in PLINK using an additive genetic model.
 
-### 5. Lead Association Signal
+### 5. [SNP-Level Association Analysis](code/05_association_analysis.sh)
 
+## Lead Association Signal
 The strongest association identified in the analysis was:
 
 | Characteristic         | Result        |
@@ -104,7 +105,26 @@ The strongest association identified in the analysis was:
 
 The lead SNP demonstrated a highly significant association with log-transformed triglyceride levels after adjustment for age, sex, and log-transformed BMI.
 
-### 6. Regional Association Analysis
+## Key Visualizations
+
+The complete collection of analysis figures is available in the [figures directory](figures/).
+
+### Chromosome 19 Association Plot
+
+[[Chromosome 19 association plot](figures/manhattan_plot.png)](figures/manhattan_plot.png)
+
+### Q-Q Plot
+
+[[Q-Q plot of association p-values](figures/qq_plot.png)](figures/qq_plot.png)
+
+### Regional Association Plot
+
+[[Regional association plot](figures/regional_association_plot.png)](figures/regional_association_plot.png)
+
+Additional phenotype and transformation diagnostics are available in the [figures directory](figures/).
+
+
+### 6. [Regional Association Analysis](code/06_regional_analysis.R)
 
 A **±100 kb regional association analysis** was conducted around the lead SNP.
 
@@ -121,7 +141,7 @@ The region contained **55 SNPs** and included several annotated genes, including
 
 A regional association plot was generated using **LocusZoom** to visualize the association signal and surrounding genomic region.
 
-### 7. Manhattan and Q-Q Plots
+### 7. [GWAS Visualization and Genomic Inflation Assessment](code/07_gwas_visualization.R)
 
 A Manhattan plot was generated to visualize SNP-level association results across chromosome 19. A strong association signal was observed near the lead SNP, while most variants remained below the conventional genome-wide significance threshold.
 
