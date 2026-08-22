@@ -121,9 +121,6 @@ The complete collection of analysis figures is available in the [figures directo
 
 [[Regional association plot](figures/regional_association_plot.png)](figures/regional_association_plot.png)
 
-Additional phenotype and transformation diagnostics are available in the [figures directory](figures/).
-
-
 ### 6. [Regional Association Analysis](code/06_regional_analysis.R)
 
 A **±100 kb regional association analysis** was conducted around the lead SNP.
@@ -169,12 +166,13 @@ This indicated mild inflation of the association statistics and highlighted the 
 ```text
 triglyceride-gwas-analysis/
 │
-├── data/                              # Local
+├── data/                              # local data, not distributed
 │   ├── geno_final.ped
 │   ├── geno_final.map
 │   └── pheno_final.csv
 │
 ├── code/
+│   ├── README.md
 │   ├── 01_data_inspection.R
 │   ├── 02_genotype_qc.sh
 │   ├── 03_phenotype_analysis.R
@@ -184,6 +182,7 @@ triglyceride-gwas-analysis/
 │   └── 07_gwas_visualization.R
 │
 ├── figures/
+│   ├── README.md
 │   ├── triglyceride_distribution.png
 │   ├── bmi_distribution.png
 │   ├── log_triglyceride_distribution.png
@@ -193,6 +192,7 @@ triglyceride-gwas-analysis/
 │   └── regional_association_plot.png
 │
 ├── results/
+│   ├── README.md
 │   ├── phenotype_summary_statistics.csv
 │   ├── tg_gwas_additive_sorted.txt
 │   ├── tg_region_100kb.txt
@@ -201,6 +201,12 @@ triglyceride-gwas-analysis/
 ├── .gitignore
 └── README.md
 ```
+
+### Repository Navigation
+
+- [Analysis code](code/)
+- [Figures](figures/)
+- [Selected results](results/)
 
 ---
 
