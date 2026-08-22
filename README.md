@@ -191,13 +191,6 @@ triglyceride-gwas-analysis/
 │   ├── qq_plot.png
 │   └── regional_association_plot.png
 │
-├── results/
-│   ├── README.md
-│   ├── phenotype_summary_statistics.csv
-│   ├── tg_gwas_additive_sorted.txt
-│   ├── tg_region_100kb.txt
-│   └── genomic_inflation_factor.txt
-│
 ├── .gitignore
 └── README.md
 ```
@@ -206,7 +199,6 @@ triglyceride-gwas-analysis/
 
 - [Analysis code](code/)
 - [Figures](figures/)
-- [Selected results](results/)
 
 ---
 
